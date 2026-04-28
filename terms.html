@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms & Disclaimer - UpTrades</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0A84FF;
+            --accent: #30D5C8;
+            --danger: #C4514E;
+            --dark-base: #0A0F18;
+            --light-base: #F8FAFC;
+            --text-color: #F8FAFC;
+            --text-secondary: #9BA1A6;
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--dark-base);
+            color: var(--text-color);
+            line-height: 1.6;
+            background-image: radial-gradient(circle at top left, rgba(196, 81, 78, 0.1) 0%, transparent 50%);
+            background-attachment: fixed;
+        }
+
+        .header {
+            padding: 30px 20px;
+            text-align: center;
+            border-bottom: 1px solid var(--glass-border);
+            background: rgba(10, 15, 24, 0.8);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-weight: 700;
+            font-size: 2rem;
+            background: linear-gradient(135deg, var(--danger), var(--primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+
+        .nav-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            display: inline-block;
+            transition: color 0.2s;
+        }
+
+        .nav-link:hover {
+            color: var(--primary);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .content-block {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            padding: 30px;
+            border-radius: 16px;
+            margin-bottom: 40px;
+        }
+
+        .disclaimer-box {
+            border-left: 4px solid var(--danger);
+            background: rgba(196, 81, 78, 0.05);
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        h2 {
+            color: var(--text-color);
+            margin-top: 0;
+            border-bottom: 1px solid var(--glass-border);
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            color: var(--accent);
+            margin-top: 25px;
+        }
+
+        p, ul, li {
+            color: var(--text-secondary);
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .lang-switch {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .lang-btn {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            color: var(--text-color);
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .lang-btn.active {
+            background: var(--danger);
+            border-color: var(--danger);
+        }
+
+        .lang-content {
+            display: none;
+        }
+
+        .lang-content.active {
+            display: block;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 30px;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--glass-border);
+            margin-top: 40px;
+        }
+        
+        .footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <a href="index.html" class="nav-link">← Back to Home</a>
+        <br>
+        <h1>Terms & Disclaimer</h1>
+    </div>
+
+    <div class="container">
+        
+        <div class="lang-switch">
+            <button class="lang-btn active" onclick="switchLang('en')">English</button>
+            <button class="lang-btn" onclick="switchLang('tr')">Türkçe</button>
+        </div>
+
+        <!-- ENGLISH CONTENT -->
+        <div id="content-en" class="lang-content active content-block">
+            <h2>Terms of Service & Disclaimer</h2>
+            <p><strong>Last Updated:</strong> April 2024</p>
+
+            <div class="disclaimer-box">
+                <h3 style="color: var(--danger); margin-top: 0;">NOT FINANCIAL ADVICE</h3>
+                <p style="margin-bottom: 0;">UpTrades is NOT an investment advisory service, a registered broker-dealer, or a financial planner. <strong>None of the information provided by the App constitutes financial, investment, legal, or tax advice.</strong> All market data, AI analysis, news, and portfolio calculations are provided for informational and educational purposes only. All investments are entirely at the user's own risk.</p>
+            </div>
+
+            <h3>1. Acceptance of Terms</h3>
+            <p>By downloading, installing, or using the UpTrades application ("App"), you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use the App.</p>
+
+            <h3>2. Market Data Accuracy & Delays</h3>
+            <p>The market data, stock prices, charts, and financial statistics shown within the App are sourced from Yahoo Finance and other third-party providers.</p>
+            <ul>
+                <li><strong>Data is often delayed</strong> by 15-20 minutes or more, depending on the exchange.</li>
+                <li><strong>UpTrades makes no guarantees</strong> regarding the accuracy, timeliness, or completeness of the data.</li>
+                <li>You should never make trading decisions based solely on the information provided in this App.</li>
+            </ul>
+
+            <h3>3. AI-Powered Insights</h3>
+            <p>The App utilizes Google's Gemini AI to analyze portfolio metrics and generate market insights. AI models can hallucinate, make mathematical errors, or draw illogical conclusions. You must independently verify any information generated by the AI before taking any financial action.</p>
+
+            <h3>4. User Responsibilities</h3>
+            <p>You agree to use the App solely for lawful purposes. You agree not to attempt to breach our security, reverse engineer the App, or bypass our proxy servers that handle the data pipelines.</p>
+
+            <h3>5. Limitation of Liability</h3>
+            <p>To the maximum extent permitted by applicable law, the UpTrades Team and its developers shall not be liable for any direct, indirect, incidental, consequential, or punitive damages, including but not limited to financial losses, lost profits, or data loss arising from your use of the App.</p>
+
+            <h3>6. Contact Information</h3>
+            <p>For any legal or terms-related inquiries, please contact us at:<br>
+            <strong>Email:</strong> <a href="mailto:zehinpod@gmail.com">zehinpod@gmail.com</a><br>
+            <strong>Developer:</strong> UpTrades Team</p>
+        </div>
+
+        <!-- TURKISH CONTENT -->
+        <div id="content-tr" class="lang-content content-block">
+            <h2>Kullanım Şartları ve Sorumluluk Reddi</h2>
+            <p><strong>Son Güncelleme:</strong> Nisan 2024</p>
+
+            <div class="disclaimer-box">
+                <h3 style="color: var(--danger); margin-top: 0;">YATIRIM TAVSİYESİ DEĞİLDİR</h3>
+                <p style="margin-bottom: 0;">UpTrades bir yatırım danışmanlığı hizmeti, kayıtlı bir aracı kurum veya bir finansal planlamacı DEĞİLDİR. <strong>Uygulama tarafından sağlanan hiçbir bilgi finansal, yatırım, hukuki veya vergi tavsiyesi niteliği taşımaz.</strong> Tüm piyasa verileri, yapay zeka analizleri, haberler ve portföy hesaplamaları yalnızca bilgilendirme ve eğitim amaçlı sunulmaktadır. Tüm yatırımlar tamamen kullanıcının kendi sorumluluğundadır.</p>
+            </div>
+
+            <h3>1. Şartların Kabulü</h3>
+            <p>UpTrades uygulamasını ("Uygulama") indirerek, kurarak veya kullanarak bu Kullanım Şartlarına tabi olmayı kabul edersiniz. Bu şartları kabul etmiyorsanız, lütfen Uygulamayı kullanmayın.</p>
+
+            <h3>2. Piyasa Verilerinin Doğruluğu ve Gecikmeler</h3>
+            <p>Uygulama içinde gösterilen piyasa verileri, hisse senedi fiyatları, grafikler ve finansal istatistikler Yahoo Finance ve diğer üçüncü taraf sağlayıcılardan alınmaktadır.</p>
+            <ul>
+                <li><strong>Veriler genellikle</strong> borsaya bağlı olarak 15-20 dakika veya daha fazla <strong>gecikmelidir</strong>.</li>
+                <li><strong>UpTrades</strong>, verilerin doğruluğu, güncelliği veya eksiksizliği konusunda <strong>hiçbir garanti vermez</strong>.</li>
+                <li>Asla yalnızca bu Uygulamada sağlanan bilgilere dayanarak alım-satım kararları vermemelisiniz.</li>
+            </ul>
+
+            <h3>3. Yapay Zeka Destekli Öngörüler</h3>
+            <p>Uygulama, portföy metriklerini analiz etmek ve piyasa öngörüleri oluşturmak için Google'ın Gemini yapay zekasını kullanır. Yapay zeka modelleri halüsinasyon görebilir, matematiksel hatalar yapabilir veya mantıksız sonuçlar çıkarabilir. Herhangi bir finansal eylemde bulunmadan önce yapay zeka tarafından oluşturulan her türlü bilgiyi bağımsız olarak doğrulamalısınız.</p>
+
+            <h3>4. Kullanıcı Sorumlulukları</h3>
+            <p>Uygulamayı yalnızca yasal amaçlarla kullanmayı kabul edersiniz. Güvenliğimizi ihlal etmeye, Uygulamaya tersine mühendislik yapmaya veya veri hatlarımızı işleyen proxy sunucularımızı atlatmaya çalışmamayı kabul edersiniz.</p>
+
+            <h3>5. Sorumluluğun Sınırlandırılması</h3>
+            <p>Geçerli yasaların izin verdiği azami ölçüde, UpTrades Ekibi ve geliştiricileri, Uygulamayı kullanmanızdan kaynaklanan finansal kayıplar, kar kayıpları veya veri kaybı dahil ancak bunlarla sınırlı olmamak üzere hiçbir doğrudan, dolaylı, arızi, sonuç olarak ortaya çıkan veya cezai zarardan sorumlu tutulamaz.</p>
+
+            <h3>6. İletişim Bilgileri</h3>
+            <p>Her türlü yasal veya kullanım şartlarıyla ilgili sorularınız için lütfen bizimle iletişime geçin:<br>
+            <strong>E-posta:</strong> <a href="mailto:zehinpod@gmail.com">zehinpod@gmail.com</a><br>
+            <strong>Geliştirici:</strong> UpTrades Team</p>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        &copy; <script>document.write(new Date().getFullYear())</script> UpTrades Team. All rights reserved.
+    </div>
+
+    <script>
+        function switchLang(lang) {
+            // Update buttons
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            // Update content
+            document.querySelectorAll('.lang-content').forEach(content => content.classList.remove('active'));
+            document.getElementById('content-' + lang).classList.add('active');
+        }
+    </script>
+</body>
+</html>
