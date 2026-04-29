@@ -106,6 +106,7 @@
         .lang-switch {
             display: flex;
             justify-content: center;
+            flex-wrap: wrap;
             gap: 10px;
             margin-bottom: 30px;
         }
@@ -163,48 +164,53 @@
         <div class="lang-switch">
             <button class="lang-btn active" onclick="switchLang('en')">English</button>
             <button class="lang-btn" onclick="switchLang('tr')">Türkçe</button>
+            <button class="lang-btn" onclick="switchLang('az')">Azərbaycan</button>
+            <button class="lang-btn" onclick="switchLang('ru')">Русский</button>
         </div>
 
         <!-- ENGLISH CONTENT -->
         <div id="content-en" class="lang-content active content-block">
             <h2>Privacy Policy</h2>
-            <p><strong>Last Updated:</strong> April 2024</p>
+            <p><strong>Last Updated:</strong> April 2026</p>
 
-            <p>Welcome to UpTrades. We respect your privacy and are committed to protecting your personal data. This Privacy Policy will inform you as to how we look after your personal data when you use our mobile application ("App") and tell you about your privacy rights.</p>
+            <p>Welcome to UpTrades. Your privacy is critically important to us. This Privacy Policy outlines how we collect, use, process, and protect your personal information when you use our mobile application ("App"). By using UpTrades, you consent to the data practices described in this policy.</p>
 
-            <h3>1. The Data We Collect About You</h3>
-            <p>We may collect, use, store, and transfer different kinds of personal data about you which we have grouped together as follows:</p>
+            <h3>1. Information We Collect</h3>
+            <p>To provide our services, we collect limited personal and non-personal data:</p>
             <ul>
-                <li><strong>Identity & Contact Data:</strong> Includes your email address, provided during the registration process via Firebase Authentication.</li>
-                <li><strong>Profile Data:</strong> Includes your user profile preferences and saved watchlists.</li>
-                <li><strong>Portfolio Data:</strong> Includes data about your portfolio holdings, transactions, and balances. This data is securely stored using Google Cloud Firestore.</li>
+                <li><strong>Account Information:</strong> When you register via Firebase Authentication, we collect your email address and authentication credentials. We do not store passwords directly on our servers.</li>
+                <li><strong>Financial & Portfolio Data:</strong> We store the financial data you input, including stock tickers, quantities, purchase prices, and watchlists. This data is securely stored in Google Cloud Firestore and linked to your unique user ID.</li>
+                <li><strong>Usage Data:</strong> We may collect anonymous diagnostic and crash reporting data to improve application stability and performance.</li>
             </ul>
 
-            <h3>2. How We Use Your Data</h3>
-            <p>We will only use your personal data when the law allows us to. Most commonly, we will use your personal data in the following circumstances:</p>
+            <h3>2. How We Use Your Information</h3>
+            <p>We use the collected information exclusively to provide and improve the UpTrades experience:</p>
             <ul>
-                <li>To register you as a new user and manage your account.</li>
-                <li>To securely store and sync your portfolio and watchlists across your devices.</li>
-                <li>To provide AI-powered market insights. Note: Portfolio metrics may be processed by Google's Gemini AI to provide personalized analysis, but personal identifiable information (such as your email) is not sent to the AI.</li>
+                <li>To authenticate your identity and secure your account.</li>
+                <li>To synchronize your portfolio, watchlists, and preferences across your devices.</li>
+                <li>To generate personalized market insights and portfolio analysis using artificial intelligence.</li>
+                <li>To communicate important updates, security alerts, and administrative messages.</li>
             </ul>
-            <p><strong>Important:</strong> We do not sell your personal data to third parties.</p>
 
-            <h3>3. Third-Party Services</h3>
-            <p>We use the following third-party services to power UpTrades:</p>
+            <h3>3. Third-Party Services and Data Sharing</h3>
+            <p>UpTrades relies on trusted third-party infrastructure. We do not sell your personal data. Data is shared only to the extent necessary to provide the App's functionality:</p>
             <ul>
-                <li><strong>Firebase (Google):</strong> For user authentication (Firebase Auth), secure database storage (Firestore), and media storage (Firebase Storage).</li>
-                <li><strong>Yahoo Finance:</strong> Market data is fetched from Yahoo Finance via our secure proxy servers. No personal user data is sent to Yahoo Finance.</li>
-                <li><strong>Google Gemini AI:</strong> Used to generate market insights and portfolio analysis.</li>
+                <li><strong>Google Firebase & Google Cloud:</strong> Used for secure authentication, database hosting (Firestore), and cloud functions. Your data is encrypted in transit and at rest.</li>
+                <li><strong>Google Gemini AI:</strong> We send anonymized portfolio metrics (such as asset allocations and ticker symbols) to Gemini AI to generate insights. <strong>We strictly prohibit sending personally identifiable information (PII) such as your email address or real name to the AI models.</strong></li>
+                <li><strong>Yahoo Finance:</strong> Real-time and historical market data is fetched through our secure backend proxy servers. No user-specific data is ever transmitted to Yahoo Finance.</li>
             </ul>
 
             <h3>4. Data Security</h3>
-            <p>We have put in place appropriate security measures to prevent your personal data from being accidentally lost, used, or accessed in an unauthorized way, altered, or disclosed. Access to your personal data is limited to those employees, agents, contractors, and other third parties who have a business need to know. Firebase Firestore uses rigorous security rules (RBAC) to ensure that users can only access and edit their own data.</p>
+            <p>We implement robust, industry-standard security measures to protect your data. All communication between the App and our servers is encrypted using HTTPS/TLS. Our Firestore database utilizes strict Role-Based Access Control (RBAC) security rules, ensuring that users can only read and write their own data. Despite our best efforts, no method of electronic transmission or storage is 100% secure.</p>
 
-            <h3>5. Data Retention</h3>
-            <p>We will only retain your personal data for as long as reasonably necessary to fulfill the purposes we collected it for, including for the purposes of satisfying any legal, regulatory, tax, accounting, or reporting requirements. You can delete your account and all associated data at any time from within the app settings.</p>
+            <h3>5. Data Retention and Deletion</h3>
+            <p>We retain your personal data only for as long as your account is active or as needed to provide you the services. You have the right to request the deletion of your account and all associated data at any time. This can be done directly within the App's settings menu or by contacting us.</p>
 
-            <h3>6. Contact Us</h3>
-            <p>If you have any questions about this Privacy Policy or our privacy practices, please contact us at:<br>
+            <h3>6. Changes to This Privacy Policy</h3>
+            <p>We may update this Privacy Policy from time to time to reflect changes in our practices or for legal reasons. We will notify you of any material changes by updating the "Last Updated" date at the top of this policy and, where appropriate, through in-app notifications.</p>
+
+            <h3>7. Contact Us</h3>
+            <p>If you have any questions, concerns, or requests regarding this Privacy Policy, please contact us at:<br>
             <strong>Email:</strong> <a href="mailto:zehinpod@gmail.com">zehinpod@gmail.com</a><br>
             <strong>Developer:</strong> UpTrades Team</p>
         </div>
@@ -212,45 +218,142 @@
         <!-- TURKISH CONTENT -->
         <div id="content-tr" class="lang-content content-block">
             <h2>Gizlilik Sözleşmesi</h2>
-            <p><strong>Son Güncelleme:</strong> Nisan 2024</p>
+            <p><strong>Son Güncelleme:</strong> Nisan 2026</p>
 
-            <p>UpTrades'e hoş geldiniz. Gizliliğinize saygı duyuyor ve kişisel verilerinizi korumayı taahhüt ediyoruz. Bu Gizlilik Politikası, mobil uygulamamızı ("Uygulama") kullandığınızda kişisel verilerinizi nasıl işlediğimizi ve gizlilik haklarınızı size açıklayacaktır.</p>
+            <p>UpTrades'e hoş geldiniz. Gizliliğiniz bizim için son derece önemlidir. Bu Gizlilik Politikası, mobil uygulamamızı ("Uygulama") kullandığınızda kişisel bilgilerinizi nasıl topladığımızı, kullandığımızı, işlediğimizi ve koruduğumuzu ana hatlarıyla belirtir. UpTrades'i kullanarak, bu politikada açıklanan veri uygulamalarını kabul etmiş olursunuz.</p>
 
-            <h3>1. Topladığımız Veriler</h3>
-            <p>Sizinle ilgili aşağıdaki türde kişisel verileri toplayabilir, kullanabilir ve saklayabiliriz:</p>
+            <h3>1. Topladığımız Bilgiler</h3>
+            <p>Hizmetlerimizi sağlamak için sınırlı kişisel ve kişisel olmayan veri topluyoruz:</p>
             <ul>
-                <li><strong>Kimlik ve İletişim Verileri:</strong> Firebase Authentication (Kimlik Doğrulama) işlemi sırasında sağlanan e-posta adresiniz.</li>
-                <li><strong>Profil Verileri:</strong> Kullanıcı profili tercihleriniz ve kaydettiğiniz izleme listeleri (watchlists).</li>
-                <li><strong>Portföy Verileri:</strong> Portföy varlıklarınız, işlemleriniz ve bakiyeleriniz hakkındaki veriler. Bu veriler Google Cloud Firestore kullanılarak güvenli bir şekilde saklanır.</li>
+                <li><strong>Hesap Bilgileri:</strong> Firebase Authentication (Kimlik Doğrulama) aracılığıyla kayıt olduğunuzda, e-posta adresinizi ve kimlik doğrulama bilgilerinizi topluyoruz. Şifreleri doğrudan sunucularımızda saklamıyoruz.</li>
+                <li><strong>Finansal ve Portföy Verileri:</strong> Hisse senedi sembolleri, miktarları, alış fiyatları ve izleme listeleri dahil olmak üzere girdiğiniz finansal verileri saklıyoruz. Bu veriler Google Cloud Firestore'da güvenli bir şekilde saklanır ve benzersiz kullanıcı kimliğinize bağlanır.</li>
+                <li><strong>Kullanım Verileri:</strong> Uygulama kararlılığını ve performansını artırmak için anonim teşhis ve çökme raporlama verileri toplayabiliriz.</li>
             </ul>
 
-            <h3>2. Verilerinizi Nasıl Kullanıyoruz</h3>
-            <p>Kişisel verilerinizi yalnızca yasaların izin verdiği durumlarda kullanacağız. Verilerinizi temel olarak şu amaçlarla kullanırız:</p>
+            <h3>2. Bilgilerinizi Nasıl Kullanıyoruz</h3>
+            <p>Toplanan bilgileri özel olarak UpTrades deneyimini sağlamak ve iyileştirmek için kullanıyoruz:</p>
             <ul>
-                <li>Sizi yeni bir kullanıcı olarak kaydetmek ve hesabınızı yönetmek.</li>
-                <li>Portföyünüzü ve izleme listelerinizi cihazlarınız arasında güvenli bir şekilde saklamak ve senkronize etmek.</li>
-                <li>Yapay zeka destekli piyasa analizleri sunmak. Not: Portföy metrikleri, kişiselleştirilmiş analiz sağlamak için Google'ın Gemini Yapay Zekası tarafından işlenebilir, ancak kişisel olarak tanımlanabilir bilgiler (örneğin e-posta adresiniz) yapay zekaya gönderilmez.</li>
+                <li>Kimliğinizi doğrulamak ve hesabınızı güvence altına almak için.</li>
+                <li>Portföyünüzü, izleme listelerinizi ve tercihlerinizi cihazlarınız arasında senkronize etmek için.</li>
+                <li>Yapay zeka kullanarak kişiselleştirilmiş piyasa öngörüleri ve portföy analizi oluşturmak için.</li>
+                <li>Önemli güncellemeleri, güvenlik uyarılarını ve yönetim mesajlarını iletmek için.</li>
             </ul>
-            <p><strong>Önemli:</strong> Kişisel verilerinizi kesinlikle üçüncü şahıslara veya kurumlara satmıyoruz.</p>
 
-            <h3>3. Üçüncü Taraf Hizmetleri</h3>
-            <p>UpTrades'in altyapısını sağlamak için aşağıdaki üçüncü taraf hizmetlerini kullanıyoruz:</p>
+            <h3>3. Üçüncü Taraf Hizmetleri ve Veri Paylaşımı</h3>
+            <p>UpTrades, güvenilir üçüncü taraf altyapılarına dayanır. Kişisel verilerinizi satmıyoruz. Veriler yalnızca Uygulamanın işlevselliğini sağlamak için gerekli olduğu ölçüde paylaşılır:</p>
             <ul>
-                <li><strong>Firebase (Google):</strong> Kullanıcı kimlik doğrulaması (Firebase Auth), güvenli veritabanı (Firestore) ve medya depolaması (Firebase Storage) için.</li>
-                <li><strong>Yahoo Finance:</strong> Piyasa verileri, güvenli proxy sunucularımız aracılığıyla Yahoo Finance'ten alınır. Yahoo Finance'e hiçbir kişisel kullanıcı verisi gönderilmez.</li>
-                <li><strong>Google Gemini AI:</strong> Piyasa öngörüleri ve portföy analizi oluşturmak için kullanılır.</li>
+                <li><strong>Google Firebase ve Google Cloud:</strong> Güvenli kimlik doğrulama, veritabanı barındırma (Firestore) ve bulut işlevleri için kullanılır. Verileriniz aktarım sırasında ve depolamada şifrelenir.</li>
+                <li><strong>Google Gemini AI:</strong> Öngörüler oluşturmak için Gemini AI'ye anonimleştirilmiş portföy metrikleri (varlık dağılımları ve hisse sembolleri gibi) gönderiyoruz. <strong>E-posta adresiniz veya gerçek adınız gibi kişisel olarak tanımlanabilir bilgilerin (PII) yapay zeka modellerine gönderilmesi kesinlikle yasaktır ve engellenmiştir.</strong></li>
+                <li><strong>Yahoo Finance:</strong> Gerçek zamanlı ve geçmiş piyasa verileri, güvenli arka uç proxy sunucularımız aracılığıyla alınır. Yahoo Finance'e hiçbir kullanıcıya özel veri iletilmez.</li>
             </ul>
 
             <h3>4. Veri Güvenliği</h3>
-            <p>Kişisel verilerinizin kazara kaybolmasını, yetkisiz bir şekilde kullanılmasını, değiştirilmesini veya ifşa edilmesini önlemek için uygun güvenlik önlemlerini aldık. Firebase Firestore, kullanıcıların yalnızca kendi verilerine erişebilmesini ve bunları düzenleyebilmesini sağlamak için katı güvenlik kuralları (RBAC) kullanır.</p>
+            <p>Verilerinizi korumak için endüstri standardında sağlam güvenlik önlemleri uyguluyoruz. Uygulama ile sunucularımız arasındaki tüm iletişim HTTPS/TLS kullanılarak şifrelenir. Firestore veritabanımız, kullanıcıların yalnızca kendi verilerini okuyup yazabilmesini sağlayan katı Rol Tabanlı Erişim Kontrolü (RBAC) güvenlik kuralları kullanır. En iyi çabalarımıza rağmen, hiçbir elektronik iletim veya depolama yöntemi %100 güvenli değildir.</p>
 
-            <h3>5. Verilerin Saklanması</h3>
-            <p>Kişisel verilerinizi, yasal, düzenleyici, vergi, muhasebe veya raporlama gereksinimlerini yerine getirmek de dahil olmak üzere, yalnızca topladığımız amaçları gerçekleştirmek için makul olarak gerekli olduğu sürece saklayacağız. Hesabınızı ve ilişkili tüm verilerinizi uygulama ayarlarından istediğiniz zaman silebilirsiniz.</p>
+            <h3>5. Verilerin Saklanması ve Silinmesi</h3>
+            <p>Kişisel verilerinizi yalnızca hesabınız aktif olduğu sürece veya size hizmet sağlamak için gerektiği kadar saklarız. Hesabınızın ve ilişkili tüm verilerin silinmesini istediğiniz zaman talep etme hakkına sahipsiniz. Bu işlem doğrudan Uygulamanın ayarlar menüsünden veya bizimle iletişime geçerek yapılabilir.</p>
 
-            <h3>6. İletişim</h3>
-            <p>Bu Gizlilik Politikası veya gizlilik uygulamalarımız hakkında herhangi bir sorunuz varsa, lütfen bizimle iletişime geçin:<br>
+            <h3>6. Bu Gizlilik Politikasındaki Değişiklikler</h3>
+            <p>Uygulamalarımızdaki değişiklikleri yansıtmak veya yasal nedenlerle bu Gizlilik Politikasını zaman zaman güncelleyebiliriz. Önemli değişiklikleri, bu politikanın en üstündeki "Son Güncelleme" tarihini güncelleyerek ve uygun durumlarda uygulama içi bildirimler aracılığıyla size bildireceğiz.</p>
+
+            <h3>7. Bize Ulaşın</h3>
+            <p>Bu Gizlilik Politikası ile ilgili herhangi bir sorunuz, endişeniz veya talebiniz varsa, lütfen bizimle iletişime geçin:<br>
             <strong>E-posta:</strong> <a href="mailto:zehinpod@gmail.com">zehinpod@gmail.com</a><br>
             <strong>Geliştirici:</strong> UpTrades Team</p>
+        </div>
+
+        <!-- AZERBAIJANI CONTENT -->
+        <div id="content-az" class="lang-content content-block">
+            <h2>Məxfilik Siyasəti</h2>
+            <p><strong>Son Yenilənmə:</strong> Aprel 2026</p>
+
+            <p>UpTrades-ə xoş gəldiniz. Sizin məxfiliyiniz bizim üçün son dərəcə vacibdir. Bu Məxfilik Siyasəti, mobil tətbiqimizdən ("Tətbiq") istifadə etdiyiniz zaman şəxsi məlumatlarınızı necə topladığımızı, istifadə etdiyimizi, emal etdiyimizi və qoruduğumuzu izah edir. UpTrades-dən istifadə edərək, bu siyasətdə təsvir olunan məlumat təcrübələri ilə razılaşırsınız.</p>
+
+            <h3>1. Topladığımız Məlumatlar</h3>
+            <p>Xidmətlərimizi təqdim etmək üçün məhdud şəxsi və qeyri-şəxsi məlumatları toplayırıq:</p>
+            <ul>
+                <li><strong>Hesab Məlumatları:</strong> Firebase Authentication (İdentifikasiya) vasitəsilə qeydiyyatdan keçdiyiniz zaman elektron poçt ünvanınızı və autentifikasiya məlumatlarınızı toplayırıq. Şifrələri birbaşa serverlərimizdə saxlamırıq.</li>
+                <li><strong>Maliyyə və Portfel Məlumatları:</strong> Daxil etdiyiniz səhm simvolları, miqdarları, alış qiymətləri və izləmə siyahıları daxil olmaqla maliyyə məlumatlarını saxlayırıq. Bu məlumatlar Google Cloud Firestore-da təhlükəsiz şəkildə saxlanılır və unikal istifadəçi ID-nizə bağlanır.</li>
+                <li><strong>İstifadə Məlumatları:</strong> Tətbiqin sabitliyini və performansını artırmaq üçün anonim diaqnostika və çökmə hesabatı məlumatlarını toplaya bilərik.</li>
+            </ul>
+
+            <h3>2. Məlumatlarınızı Necə İstifadə Edirik</h3>
+            <p>Toplanan məlumatları yalnız UpTrades təcrübəsini təmin etmək və inkişaf etdirmək üçün istifadə edirik:</p>
+            <ul>
+                <li>Kimliyinizi təsdiqləmək və hesabınızı qorumaq üçün.</li>
+                <li>Portfelinizi, izləmə siyahılarınızı və seçimlərinizi cihazlarınız arasında sinxronlaşdırmaq üçün.</li>
+                <li>Süni intellektdən istifadə edərək fərdiləşdirilmiş bazar fikirləri və portfel analizi yaratmaq üçün.</li>
+                <li>Mühüm yeniləmələri, təhlükəsizlik xəbərdarlıqlarını və inzibati mesajları çatdırmaq üçün.</li>
+            </ul>
+
+            <h3>3. Üçüncü Tərəf Xidmətləri və Məlumat Paylaşımı</h3>
+            <p>UpTrades etibarlı üçüncü tərəf infrastrukturuna əsaslanır. Biz şəxsi məlumatlarınızı satmırıq. Məlumatlar yalnız Tətbiqin funksionallığını təmin etmək üçün zəruri olan dərəcədə paylaşılır:</p>
+            <ul>
+                <li><strong>Google Firebase və Google Cloud:</strong> Təhlükəsiz autentifikasiya, məlumat bazasının hostinqi (Firestore) və bulud funksiyaları üçün istifadə olunur. Məlumatlarınız ötürülmə zamanı və saxlanmada şifrələnir.</li>
+                <li><strong>Google Gemini AI:</strong> Analizlər yaratmaq üçün Gemini AI-yə anonimləşdirilmiş portfel ölçülərini (aktivlərin bölgüsü və səhm simvolları kimi) göndəririk. <strong>Elektron poçt ünvanınız və ya əsl adınız kimi şəxsi identifikasiya edilə bilən məlumatların (PII) süni intellekt modellərinə göndərilməsi qəti qadağandır və bloklanmışdır.</strong></li>
+                <li><strong>Yahoo Finance:</strong> Real vaxt və tarixi bazar məlumatları təhlükəsiz arxa fon proxy serverlərimiz vasitəsilə əldə edilir. Heç bir istifadəçiyə aid məlumat Yahoo Finance-ə ötürülmür.</li>
+            </ul>
+
+            <h3>4. Məlumat Təhlükəsizliyi</h3>
+            <p>Məlumatlarınızı qorumaq üçün sənaye standartlarında güclü təhlükəsizlik tədbirləri həyata keçiririk. Tətbiq ilə serverlərimiz arasındakı bütün rabitə HTTPS/TLS istifadə edərək şifrələnir. Firestore məlumat bazamız, istifadəçilərin yalnız öz məlumatlarını oxuya və yaza bilməsini təmin edən sərt Rol Əsaslı Giriş Nəzarəti (RBAC) təhlükəsizlik qaydalarından istifadə edir. Ən yaxşı səylərimizə baxmayaraq, heç bir elektron ötürmə və ya saxlama üsulu 100% təhlükəsiz deyil.</p>
+
+            <h3>5. Məlumatların Saxlanması və Silinməsi</h3>
+            <p>Şəxsi məlumatlarınızı yalnız hesabınız aktiv olduğu müddətcə və ya sizə xidmət göstərmək üçün lazım olduğu qədər saxlayırıq. Hesabınızın və onunla əlaqəli bütün məlumatların istənilən vaxt silinməsini tələb etmək hüququnuz var. Bu, birbaşa Tətbiqin parametrlər menyusundan və ya bizimlə əlaqə saxlayaraq edilə bilər.</p>
+
+            <h3>6. Bu Məxfilik Siyasətinə Dəyişikliklər</h3>
+            <p>Təcrübələrimizdəki dəyişiklikləri əks etdirmək və ya hüquqi səbəblərə görə bu Məxfilik Siyasətini zaman-zaman yeniləyə bilərik. Mühüm dəyişikliklər barədə sizi bu siyasətin yuxarısındakı "Son Yenilənmə" tarixini yeniləyərək və uyğun olduqda tətbiqdaxili bildirişlər vasitəsilə xəbərdar edəcəyik.</p>
+
+            <h3>7. Bizimlə Əlaqə</h3>
+            <p>Bu Məxfilik Siyasəti ilə bağlı hər hansı bir sualınız, narahatlığınız və ya tələbiniz varsa, zəhmət olmasa bizimlə əlaqə saxlayın:<br>
+            <strong>E-poçt:</strong> <a href="mailto:zehinpod@gmail.com">zehinpod@gmail.com</a><br>
+            <strong>Tərtibatçı:</strong> UpTrades Team</p>
+        </div>
+
+        <!-- RUSSIAN CONTENT -->
+        <div id="content-ru" class="lang-content content-block">
+            <h2>Политика конфиденциальности</h2>
+            <p><strong>Последнее обновление:</strong> Апрель 2026</p>
+
+            <p>Добро пожаловать в UpTrades. Ваша конфиденциальность критически важна для нас. Данная Политика конфиденциальности описывает, как мы собираем, используем, обрабатываем и защищаем вашу личную информацию при использовании нашего мобильного приложения («Приложение»). Используя UpTrades, вы соглашаетесь с методами работы с данными, описанными в этой политике.</p>
+
+            <h3>1. Информация, которую мы собираем</h3>
+            <p>Для предоставления наших услуг мы собираем ограниченные персональные и неперсональные данные:</p>
+            <ul>
+                <li><strong>Информация об учетной записи:</strong> При регистрации через Firebase Authentication мы собираем ваш адрес электронной почты и учетные данные для аутентификации. Мы не храним пароли напрямую на наших серверах.</li>
+                <li><strong>Финансовые и портфельные данные:</strong> Мы храним введенные вами финансовые данные, включая тикеры акций, количество, цены покупки и списки наблюдения. Эти данные надежно хранятся в Google Cloud Firestore и привязаны к вашему уникальному идентификатору пользователя.</li>
+                <li><strong>Данные об использовании:</strong> Мы можем собирать анонимные данные диагностики и отчеты о сбоях для повышения стабильности и производительности приложения.</li>
+            </ul>
+
+            <h3>2. Как мы используем вашу информацию</h3>
+            <p>Мы используем собранную информацию исключительно для обеспечения работы и улучшения UpTrades:</p>
+            <ul>
+                <li>Для аутентификации вашей личности и защиты вашей учетной записи.</li>
+                <li>Для синхронизации вашего портфеля, списков наблюдения и настроек на всех ваших устройствах.</li>
+                <li>Для генерации персонализированной рыночной аналитики и анализа портфеля с использованием искусственного интеллекта.</li>
+                <li>Для отправки важных обновлений, предупреждений о безопасности и административных сообщений.</li>
+            </ul>
+
+            <h3>3. Сторонние сервисы и обмен данными</h3>
+            <p>UpTrades полагается на надежную стороннюю инфраструктуру. Мы не продаем ваши личные данные. Данные передаются только в той мере, в какой это необходимо для обеспечения функциональности Приложения:</p>
+            <ul>
+                <li><strong>Google Firebase и Google Cloud:</strong> Используются для безопасной аутентификации, хостинга базы данных (Firestore) и облачных функций. Ваши данные шифруются при передаче и хранении.</li>
+                <li><strong>Google Gemini AI:</strong> Мы отправляем анонимизированные метрики портфеля (такие как распределение активов и тикеры акций) в Gemini AI для генерации аналитики. <strong>Мы строго запрещаем отправку лично идентифицируемой информации (PII), такой как ваш адрес электронной почты или настоящее имя, моделям ИИ.</strong></li>
+                <li><strong>Yahoo Finance:</strong> Рыночные данные в реальном времени и исторические данные извлекаются через наши защищенные прокси-серверы. Никакие данные конкретного пользователя никогда не передаются в Yahoo Finance.</li>
+            </ul>
+
+            <h3>4. Безопасность данных</h3>
+            <p>Мы применяем надежные стандартные отраслевые меры безопасности для защиты ваших данных. Вся связь между Приложением и нашими серверами зашифрована с использованием HTTPS/TLS. Наша база данных Firestore использует строгие правила безопасности на основе ролей (RBAC), гарантируя, что пользователи могут читать и записывать только свои собственные данные. Несмотря на все наши усилия, ни один метод электронной передачи или хранения не является на 100% безопасным.</p>
+
+            <h3>5. Хранение и удаление данных</h3>
+            <p>Мы храним ваши личные данные только до тех пор, пока ваша учетная запись активна, или пока это необходимо для предоставления вам услуг. Вы имеете право запросить удаление вашей учетной записи и всех связанных с ней данных в любое время. Это можно сделать непосредственно в меню настроек Приложения или связавшись с нами.</p>
+
+            <h3>6. Изменения в Политике конфиденциальности</h3>
+            <p>Мы можем время от времени обновлять эту Политику конфиденциальности, чтобы отразить изменения в нашей практике или по юридическим причинам. Мы уведомим вас о любых существенных изменениях, обновив дату «Последнее обновление» в верхней части этой политики и, при необходимости, через уведомления в приложении.</p>
+
+            <h3>7. Связаться с нами</h3>
+            <p>Если у вас есть какие-либо вопросы, опасения или запросы относительно этой Политики конфиденциальности, пожалуйста, свяжитесь с нами по адресу:<br>
+            <strong>Электронная почта:</strong> <a href="mailto:zehinpod@gmail.com">zehinpod@gmail.com</a><br>
+            <strong>Разработчик:</strong> Команда UpTrades</p>
         </div>
 
     </div>
