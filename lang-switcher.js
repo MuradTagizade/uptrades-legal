@@ -98,6 +98,15 @@
       } catch (e) { /* ignore */ }
     }
 
+    // Update back link text if data-i18n-back exists
+    const backEl = document.querySelector('[data-i18n-back]');
+    if (backEl && backEl.dataset.i18n) {
+      try {
+        const texts = JSON.parse(backEl.dataset.i18n);
+        backEl.textContent = '← ' + (texts[lang] || texts.en);
+      } catch (e) { /* ignore */ }
+    }
+
     // Close menu
     document.getElementById('langMenu')?.classList.remove('open');
     document.getElementById('langToggle')?.classList.remove('open');
