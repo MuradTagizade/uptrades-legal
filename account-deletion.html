@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Deletion - UpTrades</title>
+    <meta name="description" content="Request deletion of your UpTrades account and all associated data.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0A84FF;
+            --accent: #30D5C8;
+            --danger: #C4514E;
+            --dark-base: #0A0F18;
+            --light-base: #F8FAFC;
+            --text-color: #F8FAFC;
+            --text-secondary: #9BA1A6;
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+        body {
+            margin: 0; padding: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--dark-base);
+            color: var(--text-color);
+            line-height: 1.6;
+            background-image: radial-gradient(circle at top right, rgba(10, 132, 255, 0.1) 0%, transparent 50%);
+            background-attachment: fixed;
+        }
+        .header {
+            padding: 30px 20px; text-align: center;
+            border-bottom: 1px solid var(--glass-border);
+            background: rgba(10, 15, 24, 0.8);
+            backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+            position: sticky; top: 0; z-index: 10;
+        }
+        .header h1 {
+            margin: 0; font-weight: 700; font-size: 2rem;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+        .nav-link {
+            color: var(--text-secondary); text-decoration: none;
+            font-size: 0.9rem; margin-bottom: 10px; display: inline-block;
+            transition: color 0.2s;
+        }
+        .nav-link:hover { color: var(--primary); }
+        .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
+        .content-block {
+            background: var(--glass-bg); border: 1px solid var(--glass-border);
+            padding: 30px; border-radius: 16px; margin-bottom: 40px;
+        }
+        h2 { color: var(--text-color); margin-top: 0; border-bottom: 1px solid var(--glass-border); padding-bottom: 10px; }
+        h3 { color: var(--accent); margin-top: 25px; }
+        p, ul, li { color: var(--text-secondary); }
+        ul { padding-left: 20px; }
+        li { margin-bottom: 8px; }
+        .lang-switch { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin-bottom: 30px; }
+        .lang-btn {
+            background: var(--glass-bg); border: 1px solid var(--glass-border);
+            color: var(--text-color); padding: 8px 16px; border-radius: 20px;
+            cursor: pointer; font-family: 'Inter', sans-serif; font-weight: 500;
+            transition: all 0.2s;
+        }
+        .lang-btn.active { background: var(--primary); border-color: var(--primary); }
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+        .warning-box {
+            background: rgba(196, 81, 78, 0.1); border: 1px solid rgba(196, 81, 78, 0.3);
+            border-radius: 12px; padding: 20px; margin: 20px 0;
+        }
+        .warning-box strong { color: var(--danger); }
+        .step-box {
+            background: rgba(10, 132, 255, 0.08); border: 1px solid rgba(10, 132, 255, 0.2);
+            border-radius: 12px; padding: 20px; margin: 15px 0;
+        }
+        .step-number {
+            display: inline-block; width: 28px; height: 28px; line-height: 28px;
+            text-align: center; background: var(--primary); color: white;
+            border-radius: 50%; font-weight: 700; font-size: 0.85rem; margin-right: 10px;
+        }
+        .step-title { color: var(--text-color); font-weight: 600; }
+        .email-link { color: var(--accent); text-decoration: none; font-weight: 600; }
+        .email-link:hover { text-decoration: underline; }
+        .footer {
+            text-align: center; padding: 30px; color: var(--text-secondary);
+            font-size: 0.9rem; border-top: 1px solid var(--glass-border); margin-top: 40px;
+        }
+        .footer a { color: var(--accent); text-decoration: none; }
+        .divider { border: none; border-top: 1px solid var(--glass-border); margin: 25px 0; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="index.html" class="nav-link">← Back to Home</a><br>
+        <h1>Account Deletion</h1>
+    </div>
+    <div class="container">
+        <div class="lang-switch">
+            <button class="lang-btn active" onclick="switchLang('en')">English</button>
+            <button class="lang-btn" onclick="switchLang('tr')">Türkçe</button>
+            <button class="lang-btn" onclick="switchLang('az')">Azərbaycan</button>
+            <button class="lang-btn" onclick="switchLang('ru')">Русский</button>
+        </div>
+
+        <!-- ENGLISH -->
+        <div id="content-en" class="lang-content active content-block">
+            <h2>Account &amp; Data Deletion</h2>
+            <p><strong>Last Updated:</strong> April 2026</p>
+            <p>At UpTrades, we respect your right to control your personal data. You can request the permanent deletion of your account and all associated data at any time using one of the methods described below.</p>
+
+            <h3>Option 1: Delete via the App</h3>
+            <p>The fastest way to delete your account is directly within the UpTrades app:</p>
+            <div class="step-box">
+                <p><span class="step-number">1</span><span class="step-title">Open UpTrades and go to Settings</span></p>
+                <p><span class="step-number">2</span><span class="step-title">Tap "Account" or "Profile"</span></p>
+                <p><span class="step-number">3</span><span class="step-title">Tap "Delete My Account"</span></p>
+                <p><span class="step-number">4</span><span class="step-title">Confirm the deletion when prompted</span></p>
+            </div>
+
+            <h3>Option 2: Request via Email</h3>
+            <p>If you have already uninstalled the app or cannot access your account, you can request deletion by sending an email:</p>
+            <div class="step-box">
+                <p><span class="step-number">1</span><span class="step-title">Send an email to <a href="mailto:Muradtagi@yandex.com" class="email-link">Muradtagi@yandex.com</a></span></p>
+                <p><span class="step-number">2</span><span class="step-title">Use the subject line: "Account Deletion Request"</span></p>
+                <p><span class="step-number">3</span><span class="step-title">Include the email address associated with your UpTrades account</span></p>
+                <p><span class="step-number">4</span><span class="step-title">Your request will be processed within 7 business days</span></p>
+            </div>
+
+            <h3>What Data Is Deleted?</h3>
+            <p>When your account is deleted, the following data is permanently removed from our servers:</p>
+            <ul>
+                <li><strong>Account Information:</strong> Email address, profile details, and authentication credentials</li>
+                <li><strong>Portfolio Data:</strong> All stock holdings, purchase prices, quantities, and transaction history</li>
+                <li><strong>Watchlists:</strong> All saved watchlists and tracked assets</li>
+                <li><strong>Preferences:</strong> App settings, notification preferences, and UI customizations</li>
+                <li><strong>AI Insights History:</strong> All previously generated AI analysis results</li>
+            </ul>
+
+            <div class="warning-box">
+                <strong>⚠️ Important:</strong> Account deletion is permanent and irreversible. Once deleted, your data cannot be recovered. Please ensure you have exported any information you wish to keep before proceeding.
+            </div>
+
+            <h3>Data Retention After Deletion</h3>
+            <p>After account deletion, all personal data is removed within <strong>30 days</strong>. Anonymized, aggregated analytics data (which cannot identify you) may be retained for service improvement purposes. No personally identifiable information (PII) is kept after deletion.</p>
+
+            <hr class="divider">
+            <h3>Contact Us</h3>
+            <p>If you have questions about account deletion, please contact us:<br>
+            <strong>Email:</strong> <a href="mailto:Muradtagi@yandex.com" class="email-link">Muradtagi@yandex.com</a><br>
+            <strong>Developer:</strong> Murad Taghizade</p>
+        </div>
+
+        <!-- TURKISH -->
+        <div id="content-tr" class="lang-content content-block">
+            <h2>Hesap ve Veri Silme</h2>
+            <p><strong>Son Güncelleme:</strong> Nisan 2026</p>
+            <p>UpTrades olarak kişisel verileriniz üzerindeki kontrol hakkınıza saygı duyuyoruz. Aşağıda açıklanan yöntemlerden birini kullanarak hesabınızın ve ilişkili tüm verilerin kalıcı olarak silinmesini istediğiniz zaman talep edebilirsiniz.</p>
+
+            <h3>Seçenek 1: Uygulama İçinden Silme</h3>
+            <p>Hesabınızı silmenin en hızlı yolu doğrudan UpTrades uygulaması içindendir:</p>
+            <div class="step-box">
+                <p><span class="step-number">1</span><span class="step-title">UpTrades'i açın ve Ayarlar'a gidin</span></p>
+                <p><span class="step-number">2</span><span class="step-title">"Hesap" veya "Profil" seçeneğine dokunun</span></p>
+                <p><span class="step-number">3</span><span class="step-title">"Hesabımı Sil" seçeneğine dokunun</span></p>
+                <p><span class="step-number">4</span><span class="step-title">İstendiğinde silme işlemini onaylayın</span></p>
+            </div>
+
+            <h3>Seçenek 2: E-posta ile Talep</h3>
+            <p>Uygulamayı zaten kaldırdıysanız veya hesabınıza erişemiyorsanız, e-posta göndererek silme talebinde bulunabilirsiniz:</p>
+            <div class="step-box">
+                <p><span class="step-number">1</span><span class="step-title"><a href="mailto:Muradtagi@yandex.com" class="email-link">Muradtagi@yandex.com</a> adresine e-posta gönderin</span></p>
+                <p><span class="step-number">2</span><span class="step-title">Konu satırı: "Hesap Silme Talebi"</span></p>
+                <p><span class="step-number">3</span><span class="step-title">UpTrades hesabınızla ilişkili e-posta adresini ekleyin</span></p>
+                <p><span class="step-number">4</span><span class="step-title">Talebiniz 7 iş günü içinde işleme alınacaktır</span></p>
+            </div>
+
+            <h3>Hangi Veriler Silinir?</h3>
+            <p>Hesabınız silindiğinde, aşağıdaki veriler sunucularımızdan kalıcı olarak kaldırılır:</p>
+            <ul>
+                <li><strong>Hesap Bilgileri:</strong> E-posta adresi, profil bilgileri ve kimlik doğrulama bilgileri</li>
+                <li><strong>Portföy Verileri:</strong> Tüm hisse senetleri, alış fiyatları, miktarlar ve işlem geçmişi</li>
+                <li><strong>İzleme Listeleri:</strong> Tüm kaydedilmiş izleme listeleri ve takip edilen varlıklar</li>
+                <li><strong>Tercihler:</strong> Uygulama ayarları, bildirim tercihleri ve arayüz özelleştirmeleri</li>
+                <li><strong>AI Analiz Geçmişi:</strong> Daha önce oluşturulmuş tüm yapay zeka analiz sonuçları</li>
+            </ul>
+
+            <div class="warning-box">
+                <strong>⚠️ Önemli:</strong> Hesap silme işlemi kalıcı ve geri alınamaz. Silindikten sonra verileriniz kurtarılamaz. Devam etmeden önce saklamak istediğiniz bilgileri dışa aktardığınızdan emin olun.
+            </div>
+
+            <h3>Silme Sonrası Veri Saklama</h3>
+            <p>Hesap silindikten sonra tüm kişisel veriler <strong>30 gün</strong> içinde kaldırılır. Anonimleştirilmiş, toplu analiz verileri (sizi tanımlayamayan) hizmet iyileştirme amacıyla saklanabilir. Silme işleminden sonra hiçbir kişisel tanımlayıcı bilgi (PII) tutulmaz.</p>
+
+            <hr class="divider">
+            <h3>Bize Ulaşın</h3>
+            <p>Hesap silme hakkında sorularınız varsa bizimle iletişime geçin:<br>
+            <strong>E-posta:</strong> <a href="mailto:Muradtagi@yandex.com" class="email-link">Muradtagi@yandex.com</a><br>
+            <strong>Geliştirici:</strong> Murad Taghizade</p>
+        </div>
+
+        <!-- AZERBAIJANI -->
+        <div id="content-az" class="lang-content content-block">
+            <h2>Hesab və Məlumat Silmə</h2>
+            <p><strong>Son Yenilənmə:</strong> Aprel 2026</p>
+            <p>UpTrades olaraq şəxsi məlumatlarınız üzərindəki nəzarət hüququnuza hörmət edirik. Aşağıda təsvir olunan üsullardan birini istifadə edərək hesabınızın və bütün əlaqəli məlumatların həmişəlik silinməsini istənilən vaxt tələb edə bilərsiniz.</p>
+
+            <h3>Seçim 1: Tətbiq Daxilindən Silmə</h3>
+            <p>Hesabınızı silməyin ən sürətli yolu birbaşa UpTrades tətbiqi daxilindədir:</p>
+            <div class="step-box">
+                <p><span class="step-number">1</span><span class="step-title">UpTrades-i açın və Parametrlərə keçin</span></p>
+                <p><span class="step-number">2</span><span class="step-title">"Hesab" və ya "Profil" bölməsinə toxunun</span></p>
+                <p><span class="step-number">3</span><span class="step-title">"Hesabımı Sil" seçiminə toxunun</span></p>
+                <p><span class="step-number">4</span><span class="step-title">Tələb olunduqda silmə əməliyyatını təsdiqləyin</span></p>
+            </div>
+
+            <h3>Seçim 2: E-poçt ilə Müraciət</h3>
+            <p>Tətbiqi artıq silmisinizsə və ya hesabınıza daxil ola bilmirsinizsə, e-poçt göndərərək silmə tələbi edə bilərsiniz:</p>
+            <div class="step-box">
+                <p><span class="step-number">1</span><span class="step-title"><a href="mailto:Muradtagi@yandex.com" class="email-link">Muradtagi@yandex.com</a> ünvanına e-poçt göndərin</span></p>
+                <p><span class="step-number">2</span><span class="step-title">Mövzu sətri: "Hesab Silmə Tələbi"</span></p>
+                <p><span class="step-number">3</span><span class="step-title">UpTrades hesabınızla əlaqəli e-poçt ünvanını qeyd edin</span></p>
+                <p><span class="step-number">4</span><span class="step-title">Müraciətiniz 7 iş günü ərzində emal olunacaq</span></p>
+            </div>
+
+            <h3>Hansı Məlumatlar Silinir?</h3>
+            <p>Hesabınız silindikdə aşağıdakı məlumatlar serverlərimizdən həmişəlik silinir:</p>
+            <ul>
+                <li><strong>Hesab Məlumatları:</strong> E-poçt ünvanı, profil təfərrüatları və autentifikasiya məlumatları</li>
+                <li><strong>Portfel Məlumatları:</strong> Bütün səhm aktivləri, alış qiymətləri, miqdarlar və əməliyyat tarixçəsi</li>
+                <li><strong>İzləmə Siyahıları:</strong> Bütün saxlanmış izləmə siyahıları və izlənilən aktivlər</li>
+                <li><strong>Seçimlər:</strong> Tətbiq parametrləri, bildiriş seçimləri və interfeys fərdiləşdirmələri</li>
+                <li><strong>AI Analiz Tarixçəsi:</strong> Əvvəllər yaradılmış bütün süni intellekt analiz nəticələri</li>
+            </ul>
+
+            <div class="warning-box">
+                <strong>⚠️ Vacib:</strong> Hesab silmə əməliyyatı qalıcı və geri dönməzdir. Silindikdən sonra məlumatlarınız bərpa edilə bilməz. Davam etmədən əvvəl saxlamaq istədiyiniz məlumatları ixrac etdiyinizdən əmin olun.
+            </div>
+
+            <h3>Silmədən Sonra Məlumat Saxlama</h3>
+            <p>Hesab silindikdən sonra bütün şəxsi məlumatlar <strong>30 gün</strong> ərzində silinir. Anonimləşdirilmiş, ümumi analitik məlumatlar (sizi müəyyən edə bilməyən) xidmət təkmilləşdirmə məqsədilə saxlanıla bilər. Silmə əməliyyatından sonra heç bir şəxsi identifikasiya məlumatı (PII) saxlanmır.</p>
+
+            <hr class="divider">
+            <h3>Bizimlə Əlaqə</h3>
+            <p>Hesab silmə ilə bağlı suallarınız varsa bizimlə əlaqə saxlayın:<br>
+            <strong>E-poçt:</strong> <a href="mailto:Muradtagi@yandex.com" class="email-link">Muradtagi@yandex.com</a><br>
+            <strong>Tərtibatçı:</strong> Murad Taghizade</p>
+        </div>
+
+        <!-- RUSSIAN -->
+        <div id="content-ru" class="lang-content content-block">
+            <h2>Удаление аккаунта и данных</h2>
+            <p><strong>Последнее обновление:</strong> Апрель 2026</p>
+            <p>В UpTrades мы уважаем ваше право контролировать свои персональные данные. Вы можете запросить безвозвратное удаление вашего аккаунта и всех связанных данных в любое время, используя один из описанных ниже способов.</p>
+
+            <h3>Способ 1: Удаление через приложение</h3>
+            <p>Самый быстрый способ удалить аккаунт — непосредственно в приложении UpTrades:</p>
+            <div class="step-box">
+                <p><span class="step-number">1</span><span class="step-title">Откройте UpTrades и перейдите в Настройки</span></p>
+                <p><span class="step-number">2</span><span class="step-title">Нажмите «Аккаунт» или «Профиль»</span></p>
+                <p><span class="step-number">3</span><span class="step-title">Нажмите «Удалить мой аккаунт»</span></p>
+                <p><span class="step-number">4</span><span class="step-title">Подтвердите удаление при появлении запроса</span></p>
+            </div>
+
+            <h3>Способ 2: Запрос по электронной почте</h3>
+            <p>Если вы уже удалили приложение или не можете получить доступ к аккаунту, вы можете запросить удаление по электронной почте:</p>
+            <div class="step-box">
+                <p><span class="step-number">1</span><span class="step-title">Отправьте письмо на <a href="mailto:Muradtagi@yandex.com" class="email-link">Muradtagi@yandex.com</a></span></p>
+                <p><span class="step-number">2</span><span class="step-title">Тема письма: «Запрос на удаление аккаунта»</span></p>
+                <p><span class="step-number">3</span><span class="step-title">Укажите адрес электронной почты, связанный с вашим аккаунтом UpTrades</span></p>
+                <p><span class="step-number">4</span><span class="step-title">Ваш запрос будет обработан в течение 7 рабочих дней</span></p>
+            </div>
+
+            <h3>Какие данные удаляются?</h3>
+            <p>При удалении аккаунта следующие данные безвозвратно удаляются с наших серверов:</p>
+            <ul>
+                <li><strong>Информация об аккаунте:</strong> Адрес электронной почты, данные профиля и учётные данные</li>
+                <li><strong>Данные портфеля:</strong> Все активы, цены покупки, количество и история операций</li>
+                <li><strong>Списки наблюдения:</strong> Все сохранённые списки и отслеживаемые активы</li>
+                <li><strong>Настройки:</strong> Параметры приложения, настройки уведомлений и персонализация интерфейса</li>
+                <li><strong>История AI-анализа:</strong> Все ранее сгенерированные результаты анализа ИИ</li>
+            </ul>
+
+            <div class="warning-box">
+                <strong>⚠️ Важно:</strong> Удаление аккаунта является постоянным и необратимым. После удаления ваши данные не могут быть восстановлены. Убедитесь, что вы экспортировали всю необходимую информацию перед продолжением.
+            </div>
+
+            <h3>Хранение данных после удаления</h3>
+            <p>После удаления аккаунта все персональные данные удаляются в течение <strong>30 дней</strong>. Анонимизированные, агрегированные аналитические данные (которые не могут вас идентифицировать) могут сохраняться для улучшения сервиса. После удаления никакая персонально идентифицируемая информация (PII) не сохраняется.</p>
+
+            <hr class="divider">
+            <h3>Связаться с нами</h3>
+            <p>Если у вас есть вопросы об удалении аккаунта, свяжитесь с нами:<br>
+            <strong>Эл. почта:</strong> <a href="mailto:Muradtagi@yandex.com" class="email-link">Muradtagi@yandex.com</a><br>
+            <strong>Разработчик:</strong> Мурад Тагизаде</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy; <script>document.write(new Date().getFullYear())</script> Murad Taghizade. All rights reserved.
+    </div>
+
+    <script>
+        function switchLang(lang) {
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            document.querySelectorAll('.lang-content').forEach(content => content.classList.remove('active'));
+            document.getElementById('content-' + lang).classList.add('active');
+        }
+    </script>
+</body>
+</html>
