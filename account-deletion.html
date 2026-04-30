@@ -11,21 +11,10 @@
     <style>
         :root{--primary:#0A84FF;--accent:#30D5C8;--danger:#C4514E;--dark-base:#0A0F18;--text-color:#F8FAFC;--text-secondary:#9BA1A6;--glass-bg:rgba(255,255,255,0.05);--glass-border:rgba(255,255,255,0.1)}
         body{margin:0;padding:0;font-family:'Inter',sans-serif;background-color:var(--dark-base);color:var(--text-color);line-height:1.6;background-image:radial-gradient(circle at top right,rgba(10,132,255,0.1) 0%,transparent 50%);background-attachment:fixed}
-        .header{padding:20px 24px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--glass-border);background:rgba(10,15,24,0.8);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);position:sticky;top:0;z-index:10}
-        .header-left{display:flex;align-items:center;gap:16px}
-        .nav-link{color:var(--text-secondary);text-decoration:none;font-size:0.85rem;transition:color 0.2s;white-space:nowrap}
+        .header{padding:30px 20px;text-align:center;border-bottom:1px solid var(--glass-border);background:rgba(10,15,24,0.8);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);position:sticky;top:0;z-index:10}
+        .header h1{margin:0;font-weight:700;font-size:2rem;background:linear-gradient(135deg,var(--primary),var(--accent));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;display:inline-block}
+        .nav-link{color:var(--text-secondary);text-decoration:none;font-size:0.9rem;margin-bottom:10px;display:inline-block;transition:color 0.2s}
         .nav-link:hover{color:var(--primary)}
-        .header-title{margin:0;font-weight:700;font-size:1.5rem;background:linear-gradient(135deg,var(--primary),var(--accent));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
-        .lang-dropdown{position:relative}
-        .lang-toggle{background:var(--glass-bg);border:1px solid var(--glass-border);color:var(--text-color);padding:8px 14px;border-radius:10px;cursor:pointer;font-family:'Inter',sans-serif;font-size:0.85rem;font-weight:500;display:flex;align-items:center;gap:6px;transition:all 0.2s}
-        .lang-toggle:hover{background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.2)}
-        .lang-toggle svg{width:14px;height:14px;transition:transform 0.2s}
-        .lang-toggle.open svg{transform:rotate(180deg)}
-        .lang-menu{position:absolute;top:calc(100% + 8px);right:0;background:rgba(16,22,36,0.95);border:1px solid var(--glass-border);border-radius:12px;overflow:hidden;min-width:160px;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);box-shadow:0 12px 40px rgba(0,0,0,0.4);display:none;z-index:20}
-        .lang-menu.open{display:block}
-        .lang-option{padding:10px 16px;cursor:pointer;font-size:0.85rem;color:var(--text-secondary);transition:all 0.15s;display:flex;align-items:center;gap:8px}
-        .lang-option:hover{background:rgba(255,255,255,0.08);color:var(--text-color)}
-        .lang-option.active{color:var(--accent);font-weight:600}
         .container{max-width:800px;margin:0 auto;padding:40px 20px}
         .content-block{background:var(--glass-bg);border:1px solid var(--glass-border);padding:30px;border-radius:16px;margin-bottom:40px}
         h2{color:var(--text-color);margin-top:0;border-bottom:1px solid var(--glass-border);padding-bottom:10px}
@@ -45,27 +34,13 @@
         .footer{text-align:center;padding:30px;color:var(--text-secondary);font-size:0.9rem;border-top:1px solid var(--glass-border);margin-top:40px}
         .footer a{color:var(--accent);text-decoration:none}
         .divider{border:none;border-top:1px solid var(--glass-border);margin:25px 0}
-        @media(max-width:600px){.header{padding:16px;flex-wrap:wrap;gap:12px}.header-title{font-size:1.2rem}}
     </style>
 </head>
 <body>
     <div class="header">
-        <div class="header-left">
-            <a href="index.html" class="nav-link">← Back</a>
-            <h1 class="header-title" data-i18n-title>Account Deletion</h1>
-        </div>
-        <div class="lang-dropdown">
-            <button class="lang-toggle" onclick="toggleMenu()" id="langToggle">
-                🌐 English
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-            </button>
-            <div class="lang-menu" id="langMenu">
-                <div class="lang-option active" onclick="switchLang('en')">🇬🇧 English</div>
-                <div class="lang-option" onclick="switchLang('tr')">🇹🇷 Türkçe</div>
-                <div class="lang-option" onclick="switchLang('az')">🇦🇿 Azərbaycan</div>
-                <div class="lang-option" onclick="switchLang('ru')">🇷🇺 Русский</div>
-            </div>
-        </div>
+        <a href="index.html" class="nav-link">← Back to Home</a>
+        <br>
+        <h1>Account Deletion</h1>
     </div>
 
     <div class="container">
@@ -129,7 +104,6 @@
                 <p><span class="step-number">4</span><span class="step-title">Talebiniz 7 iş günü içinde işleme alınacaktır</span></p>
             </div>
             <h3>Hangi Veriler Silinir?</h3>
-            <p>Hesabınız silindiğinde, aşağıdaki veriler sunucularımızdan kalıcı olarak kaldırılır:</p>
             <ul>
                 <li><strong>Hesap Bilgileri:</strong> E-posta, profil bilgileri, kimlik doğrulama bilgileri</li>
                 <li><strong>Portföy Verileri:</strong> Tüm hisse senetleri, alış fiyatları, miktarlar, işlem geçmişi</li>
@@ -139,7 +113,7 @@
             </ul>
             <div class="warning-box"><strong>⚠️ Önemli:</strong> Hesap silme işlemi kalıcı ve geri alınamaz. Silindikten sonra verileriniz kurtarılamaz.</div>
             <h3>Silme Sonrası Veri Saklama</h3>
-            <p>Tüm kişisel veriler <strong>30 gün</strong> içinde kaldırılır. Anonimleştirilmiş analiz verileri hizmet iyileştirme amacıyla saklanabilir. Silme sonrası hiçbir PII tutulmaz.</p>
+            <p>Tüm kişisel veriler <strong>30 gün</strong> içinde kaldırılır. Anonimleştirilmiş analiz verileri hizmet iyileştirme amacıyla saklanabilir.</p>
             <hr class="divider">
             <h3>Bize Ulaşın</h3>
             <p><strong>E-posta:</strong> <a href="mailto:Muradtagi@yandex.com" class="email-link">Muradtagi@yandex.com</a><br><strong>Geliştirici:</strong> Murad Taghizade</p>
@@ -151,7 +125,6 @@
             <p><strong>Son Yenilənmə:</strong> Aprel 2026</p>
             <p>UpTrades olaraq şəxsi məlumatlarınız üzərindəki nəzarət hüququnuza hörmət edirik. Aşağıda təsvir olunan üsullardan birini istifadə edərək hesabınızın və bütün əlaqəli məlumatların həmişəlik silinməsini istənilən vaxt tələb edə bilərsiniz.</p>
             <h3>Seçim 1: Tətbiq Daxilindən Silmə</h3>
-            <p>Hesabınızı silməyin ən sürətli yolu birbaşa UpTrades tətbiqi daxilindədir:</p>
             <div class="step-box">
                 <p><span class="step-number">1</span><span class="step-title">UpTrades-i açın və Parametrlərə keçin</span></p>
                 <p><span class="step-number">2</span><span class="step-title">"Hesab" və ya "Profil" bölməsinə toxunun</span></p>
@@ -159,7 +132,6 @@
                 <p><span class="step-number">4</span><span class="step-title">Tələb olunduqda silmə əməliyyatını təsdiqləyin</span></p>
             </div>
             <h3>Seçim 2: E-poçt ilə Müraciət</h3>
-            <p>Tətbiqi artıq silmisinizsə və ya hesabınıza daxil ola bilmirsinizsə, e-poçt göndərərək silmə tələbi edə bilərsiniz:</p>
             <div class="step-box">
                 <p><span class="step-number">1</span><span class="step-title"><a href="mailto:Muradtagi@yandex.com" class="email-link">Muradtagi@yandex.com</a> ünvanına e-poçt göndərin</span></p>
                 <p><span class="step-number">2</span><span class="step-title">Mövzu sətri: "Hesab Silmə Tələbi"</span></p>
@@ -167,7 +139,6 @@
                 <p><span class="step-number">4</span><span class="step-title">Müraciətiniz 7 iş günü ərzində emal olunacaq</span></p>
             </div>
             <h3>Hansı Məlumatlar Silinir?</h3>
-            <p>Hesabınız silindikdə aşağıdakı məlumatlar serverlərimizdən həmişəlik silinir:</p>
             <ul>
                 <li><strong>Hesab Məlumatları:</strong> E-poçt, profil təfərrüatları, autentifikasiya məlumatları</li>
                 <li><strong>Portfel Məlumatları:</strong> Bütün aktivlər, alış qiymətləri, miqdarlar, əməliyyat tarixçəsi</li>
@@ -175,9 +146,9 @@
                 <li><strong>Seçimlər:</strong> Tətbiq parametrləri, bildiriş seçimləri, interfeys fərdiləşdirmələri</li>
                 <li><strong>AI Analiz Tarixçəsi:</strong> Əvvəllər yaradılmış bütün süni intellekt analiz nəticələri</li>
             </ul>
-            <div class="warning-box"><strong>⚠️ Vacib:</strong> Hesab silmə əməliyyatı qalıcı və geri dönməzdir. Silindikdən sonra məlumatlarınız bərpa edilə bilməz.</div>
+            <div class="warning-box"><strong>⚠️ Vacib:</strong> Hesab silmə əməliyyatı qalıcı və geri dönməzdir.</div>
             <h3>Silmədən Sonra Məlumat Saxlama</h3>
-            <p>Bütün şəxsi məlumatlar <strong>30 gün</strong> ərzində silinir. Anonimləşdirilmiş analitik məlumatlar xidmət təkmilləşdirmə məqsədilə saxlanıla bilər. Silmədən sonra heç bir PII saxlanmır.</p>
+            <p>Bütün şəxsi məlumatlar <strong>30 gün</strong> ərzində silinir. Anonimləşdirilmiş analitik məlumatlar xidmət təkmilləşdirmə məqsədilə saxlanıla bilər.</p>
             <hr class="divider">
             <h3>Bizimlə Əlaqə</h3>
             <p><strong>E-poçt:</strong> <a href="mailto:Muradtagi@yandex.com" class="email-link">Muradtagi@yandex.com</a><br><strong>Tərtibatçı:</strong> Murad Taghizade</p>
@@ -187,9 +158,8 @@
         <div id="content-ru" class="lang-content content-block">
             <h2>Удаление аккаунта и данных</h2>
             <p><strong>Последнее обновление:</strong> Апрель 2026</p>
-            <p>В UpTrades мы уважаем ваше право контролировать свои персональные данные. Вы можете запросить безвозвратное удаление вашего аккаунта и всех связанных данных в любое время, используя один из описанных ниже способов.</p>
+            <p>В UpTrades мы уважаем ваше право контролировать свои персональные данные. Вы можете запросить безвозвратное удаление вашего аккаунта и всех связанных данных в любое время.</p>
             <h3>Способ 1: Удаление через приложение</h3>
-            <p>Самый быстрый способ удалить аккаунт — непосредственно в приложении UpTrades:</p>
             <div class="step-box">
                 <p><span class="step-number">1</span><span class="step-title">Откройте UpTrades и перейдите в Настройки</span></p>
                 <p><span class="step-number">2</span><span class="step-title">Нажмите «Аккаунт» или «Профиль»</span></p>
@@ -197,7 +167,6 @@
                 <p><span class="step-number">4</span><span class="step-title">Подтвердите удаление при появлении запроса</span></p>
             </div>
             <h3>Способ 2: Запрос по электронной почте</h3>
-            <p>Если вы уже удалили приложение или не можете получить доступ к аккаунту, отправьте письмо:</p>
             <div class="step-box">
                 <p><span class="step-number">1</span><span class="step-title">Отправьте письмо на <a href="mailto:Muradtagi@yandex.com" class="email-link">Muradtagi@yandex.com</a></span></p>
                 <p><span class="step-number">2</span><span class="step-title">Тема: «Запрос на удаление аккаунта»</span></p>
@@ -205,7 +174,6 @@
                 <p><span class="step-number">4</span><span class="step-title">Ваш запрос будет обработан в течение 7 рабочих дней</span></p>
             </div>
             <h3>Какие данные удаляются?</h3>
-            <p>При удалении аккаунта следующие данные безвозвратно удаляются:</p>
             <ul>
                 <li><strong>Информация об аккаунте:</strong> Эл. почта, данные профиля, учётные данные</li>
                 <li><strong>Данные портфеля:</strong> Все активы, цены покупки, количество, история операций</li>
@@ -213,9 +181,9 @@
                 <li><strong>Настройки:</strong> Параметры приложения, уведомления, персонализация</li>
                 <li><strong>История AI-анализа:</strong> Все ранее сгенерированные результаты ИИ</li>
             </ul>
-            <div class="warning-box"><strong>⚠️ Важно:</strong> Удаление аккаунта постоянно и необратимо. После удаления данные не могут быть восстановлены.</div>
+            <div class="warning-box"><strong>⚠️ Важно:</strong> Удаление аккаунта постоянно и необратимо.</div>
             <h3>Хранение данных после удаления</h3>
-            <p>Все персональные данные удаляются в течение <strong>30 дней</strong>. Анонимизированные данные могут сохраняться для улучшения сервиса. Никакая PII не сохраняется.</p>
+            <p>Все персональные данные удаляются в течение <strong>30 дней</strong>. Анонимизированные данные могут сохраняться для улучшения сервиса.</p>
             <hr class="divider">
             <h3>Связаться с нами</h3>
             <p><strong>Эл. почта:</strong> <a href="mailto:Muradtagi@yandex.com" class="email-link">Muradtagi@yandex.com</a><br><strong>Разработчик:</strong> Мурад Тагизаде</p>
@@ -226,35 +194,6 @@
         &copy; <script>document.write(new Date().getFullYear())</script> Murad Taghizade. All rights reserved.
     </div>
 
-    <script>
-        const titles = {en:'Account Deletion',tr:'Hesap Silme',az:'Hesab Silmə',ru:'Удаление аккаунта'};
-        const backTexts = {en:'← Back',tr:'← Geri Dön',az:'← Geri',ru:'← Назад'};
-        const labels = {en:'🌐 English',tr:'🌐 Türkçe',az:'🌐 Azərbaycan',ru:'🌐 Русский'};
-
-        function toggleMenu(){
-            document.getElementById('langMenu').classList.toggle('open');
-            document.getElementById('langToggle').classList.toggle('open');
-        }
-
-        function switchLang(lang){
-            document.querySelectorAll('.lang-content').forEach(c=>c.classList.remove('active'));
-            document.getElementById('content-'+lang).classList.add('active');
-            document.querySelectorAll('.lang-option').forEach(o=>o.classList.remove('active'));
-            event.target.classList.add('active');
-            document.getElementById('langToggle').firstChild.textContent=labels[lang]+' ';
-            document.querySelector('[data-i18n-title]').textContent=titles[lang];
-            document.querySelector('.nav-link').textContent=backTexts[lang];
-            document.documentElement.lang=lang==='az'?'az':lang==='tr'?'tr':lang==='ru'?'ru':'en';
-            toggleMenu();
-        }
-
-        document.addEventListener('click',function(e){
-            const dd=document.querySelector('.lang-dropdown');
-            if(!dd.contains(e.target)){
-                document.getElementById('langMenu').classList.remove('open');
-                document.getElementById('langToggle').classList.remove('open');
-            }
-        });
-    </script>
+    <script src="lang-switcher.js"></script>
 </body>
 </html>

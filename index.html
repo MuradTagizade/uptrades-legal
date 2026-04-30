@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UpTrades</title>
+    <title>UpTrades - Legal Documents</title>
+    <meta name="description" content="UpTrades legal documents: Privacy Policy, Terms of Service, and Account Deletion.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -35,6 +36,19 @@
                               radial-gradient(circle at bottom left, rgba(48, 213, 200, 0.15) 0%, transparent 40%);
         }
 
+        /* Header for lang dropdown */
+        .header {
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            padding: 16px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            z-index: 10;
+        }
+
         .container {
             max-width: 800px;
             padding: 40px 20px;
@@ -46,6 +60,7 @@
             margin-bottom: 20px;
             background: linear-gradient(135deg, var(--primary), var(--accent));
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
             display: inline-block;
         }
@@ -56,6 +71,9 @@
             margin-bottom: 40px;
             line-height: 1.6;
         }
+
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
 
         .links {
             display: flex;
@@ -97,13 +115,32 @@
     </style>
 </head>
 <body>
+    <!-- Header only for lang dropdown -->
+    <div class="header"></div>
+
     <div class="container">
         <div class="logo">UpTrades</div>
-        <p class="tagline">Smart Portfolio Tracking & AI-Powered Market Insights.<br>Your financial journey, elevated.</p>
-        
+
+        <!-- EN -->
+        <div id="content-en" class="lang-content active">
+            <p class="tagline">Smart Portfolio Tracking &amp; AI-Powered Market Insights.<br>Your financial journey, elevated.</p>
+        </div>
+        <!-- TR -->
+        <div id="content-tr" class="lang-content">
+            <p class="tagline">Akıllı Portföy Takibi ve Yapay Zeka Destekli Piyasa Analizleri.<br>Finansal yolculuğunuz, bir üst seviyeye taşındı.</p>
+        </div>
+        <!-- AZ -->
+        <div id="content-az" class="lang-content">
+            <p class="tagline">Ağıllı Portfel İzləmə və Süni İntellektlə Bazar Təhlili.<br>Maliyyə səyahətiniz yeni bir səviyyəyə çatdı.</p>
+        </div>
+        <!-- RU -->
+        <div id="content-ru" class="lang-content">
+            <p class="tagline">Умное отслеживание портфеля и ИИ-анализ рынков.<br>Ваш финансовый путь на новом уровне.</p>
+        </div>
+
         <div class="links">
             <a href="privacy.html" class="link-card">Privacy Policy</a>
-            <a href="terms.html" class="link-card">Terms & Disclaimer</a>
+            <a href="terms.html" class="link-card">Terms &amp; Disclaimer</a>
             <a href="account-deletion.html" class="link-card">Account Deletion</a>
         </div>
 
@@ -112,5 +149,7 @@
             Contact: <a href="mailto:Muradtagi@yandex.com">Muradtagi@yandex.com</a>
         </div>
     </div>
+
+    <script src="lang-switcher.js"></script>
 </body>
 </html>
