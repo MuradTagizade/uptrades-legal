@@ -18,7 +18,6 @@
     // Convert header to flex layout
     header.style.display = 'flex';
     header.style.alignItems = 'center';
-    header.style.justifyContent = 'space-between';
     header.style.textAlign = 'left';
     header.style.padding = '16px 24px';
 
@@ -26,6 +25,9 @@
     const hasChildren = Array.from(header.childNodes).some(
       n => n.nodeType === 1 || (n.nodeType === 3 && n.textContent.trim())
     );
+    
+    header.style.justifyContent = hasChildren ? 'space-between' : 'flex-end';
+
     if (hasChildren) {
       const leftDiv = document.createElement('div');
       leftDiv.style.display = 'flex';
